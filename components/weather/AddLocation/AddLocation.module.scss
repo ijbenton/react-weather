@@ -1,0 +1,43 @@
+@import '../../../styles//variables';
+
+.add-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  height: 100%;
+  padding-bottom: 2rem;
+  &--dark {
+    color: $white;
+  }
+  &--light {
+    color: $black;
+  }
+
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__add-btn {
+    cursor: pointer;
+  }
+
+  &__close-btn {
+    cursor: pointer;
+    justify-self: flex-end;
+  }
+}

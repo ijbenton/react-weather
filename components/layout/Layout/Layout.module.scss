@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.layout {
+  &__main {
+    min-height: 100vh;
+
+    &-dark {
+      background-color: $black-offset;
+    }
+    &-light {
+      background-color: $white-offset;
+    }
+  }
+}

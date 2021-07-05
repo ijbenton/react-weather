@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__input {
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__dropdown {
+    width: 500px;
+    background: $white-offset;
+  }
+
+  &__suggestion {
+    background: $white;
+    cursor: pointer;
+    color: $black;
+
+    &--active {
+      background: $white-offset;
+      cursor: pointer;
+      color: $black;
+    }
+  }
+}

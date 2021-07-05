@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+.single-forecast {
+  &__modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--dark {
+      color: $white;
+    }
+
+    &--light {
+      color: $black;
+    }
+
+    // > * {
+    //   margin-right: 0.5rem;
+    // }
+
+    h4 {
+      margin-left: 0.25rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+
+  &__close-btn {
+    cursor: pointer;
+    justify-self: flex-end;
+  }
+}

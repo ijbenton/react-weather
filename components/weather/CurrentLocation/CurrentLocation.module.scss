@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+.current-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--dark {
+    color: $white;
+  }
+
+  &--light {
+    color: $black;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+      margin-left: 0.25rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+
+  &__loading,
+  &__no-location {
+    margin: 2rem 0;
+  }
+
+  &__loading {
+    border: 6px solid $white-offset; /* Light grey */
+    border-top: 6px solid $primary; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

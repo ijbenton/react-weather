@@ -1,0 +1,77 @@
+@import '../../../styles/variables';
+.saved-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--dark {
+    color: $white;
+  }
+
+  &--light {
+    color: $black;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+      margin-left: 0.25rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__content {
+    border-radius: 5px;
+    background: $primary;
+    height: 150px;
+    width: 500px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__area {
+    font-size: 1.15rem;
+  }
+
+  &__main-temp {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: auto;
+  }
+
+  &__weather {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__min-max {
+    font-size: 1.15rem;
+  }
+}
