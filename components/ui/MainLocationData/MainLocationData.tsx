@@ -1,19 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import classes from './MainLocationData.module.scss';
 import WeatherData from '../../../types/WeatherData';
 import getWeatherImage from '../../../utils/getWeatherImage';
-import { ThemeContext } from '../../../context/theme-context';
 
 interface Props {
   onClick: () => void;
   currentLocation: WeatherData;
   singleLocation: boolean;
   darkTheme: boolean;
+  modalOpen: boolean;
 }
 
 const MainLocationData = (props: Props) => {
-  const { onClick, currentLocation, singleLocation, darkTheme } = props;
+  const { onClick, currentLocation, singleLocation, darkTheme, modalOpen } =
+    props;
   const imageSrcString = getWeatherImage(currentLocation.weather[0].icon);
   return (
     <div
@@ -21,7 +22,7 @@ const MainLocationData = (props: Props) => {
         darkTheme
           ? classes['main-location-data__content--dark']
           : classes['main-location-data__content--light']
-      }`}
+      } ${!modalOpen ? classes['main-location-data__content--cursor'] : ''}`}
       onClick={onClick}
     >
       <div className={classes['main-location-data__area']}>

@@ -14,14 +14,12 @@ const ForecastList = (props: Props) => {
   const { forecastData, locationWeatherData, darkTheme } = props;
   const { list } = forecastData;
   return (
-    <div className={classes['forecast']}>
-      <div
-        className={`${classes['forecast__title']} ${
-          darkTheme
-            ? classes['forecast__title--dark']
-            : classes['forecast__title--light']
-        }`}
-      >
+    <div
+      className={`${classes['forecast']} ${
+        darkTheme ? classes['forecast--dark'] : classes['forecast--light']
+      }`}
+    >
+      <div className={classes['forecast__title']}>
         <h4>Forecast</h4>
       </div>
       <ul className={classes['forecast__list']}>

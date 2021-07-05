@@ -37,6 +37,7 @@ const CurrentLocation = () => {
           currentLocation={currentLocation}
           singleLocation={false}
           darkTheme={darkTheme}
+          modalOpen={uiCtx.isSingleLocationOpen}
         />
       );
     } else {

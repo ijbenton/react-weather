@@ -40,15 +40,15 @@ const SingleLocation = () => {
     <>
       {isSingleLocationOpen && singleLocationCurrentWeather && (
         <Modal onConfirm={toggleSingleLocationModalHandler}>
-          <div className={classes['single-forecast__modal']}>
-            <div
-              className={`${classes['single-forecast__title']} ${
-                darkTheme
-                  ? classes['single-forecast__title--dark']
-                  : classes['single-forecast__title--light']
-              }`}
-            >
-              <FiMapPin color={darkTheme ? 'white' : 'black'} size='24' />
+          <div
+            className={`${classes['single-forecast__modal']}  ${
+              darkTheme
+                ? classes['single-forecast__modal--dark']
+                : classes['single-forecast__modal--light']
+            }`}
+          >
+            <div className={classes['single-forecast__title']}>
+              <FiMapPin size='24' />
               <h4>{singleLocationCurrentWeather.name}</h4>
               <FiX
                 color='red'
@@ -62,6 +62,7 @@ const SingleLocation = () => {
               currentLocation={singleLocationCurrentWeather}
               singleLocation={true}
               darkTheme={darkTheme}
+              modalOpen={true}
             />
             {singleLocationForecast && (
               <ForecastList

@@ -5,12 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     &--dark {
       color: $white;
@@ -19,10 +13,12 @@
     &--light {
       color: $black;
     }
+  }
 
-    // > * {
-    //   margin-right: 0.5rem;
-    // }
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     h4 {
       margin-left: 0.25rem;
